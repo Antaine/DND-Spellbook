@@ -3,5 +3,12 @@
            - I started to review my old angular labs to revise the syntax.
            - We have started to work on dividing the workload and planning the project baseline.
 17/02/2019    
-- Added Angular/Material to the app allowing mat-buttons and other materials to be used.
+           - Added Angular/Material to the app allowing mat-buttons and other materials to be used.
+
+22/02/2019
+          - Set up the enviorment with all imports by testing in a new app.
+          - In order to push this it required me to force push the changes overiding previous commits and reuploading the Journals.
+          - Added a simple navbar to the application.
+          
+24/02/2019
 
