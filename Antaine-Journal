@@ -11,4 +11,6 @@
           - Added a simple navbar to the application.
           
 24/02/2019
+          - Fixed Issue with Mat Select Button causing App not to load.
+          - Added Simple mat button that allows multiple options.
 
