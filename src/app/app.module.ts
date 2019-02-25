@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from'@angular/common/http';
-import { MatInputModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpansionModule} from'@angular/material';
+import { MatInputModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpansionModule, MatFormFieldModule} from'@angular/material';
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import { MatInputModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpans
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatFormFieldModule
     
   ],
   providers: [],
