@@ -1,0 +1,2 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+mat-option {   background-color: #a1d1f5;  color: blueviolet;}
