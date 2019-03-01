@@ -11,9 +11,13 @@
           - Added a simple navbar to the application.
           
 24/02/2019
-          - Fixed Issue with Mat Select Button causing App not to load.
+          - Fixed Issue with Mat Select Button causing App not to load.(Add More Detail Later)
           - Added Simple mat button that allows multiple options.
           - Created to do List
           
 25/02/2019
          - Created Update List
+         
+01/03/2019
+         - Removed Unused Code
+         - Altered Select to Include all Classes for fringe Cases
