@@ -12,5 +12,6 @@ export class AppComponent {
   
     classes: String[] = ["Barbarian","Bard", "Cleric", "Druid", "Fighter","Monk", "Paladin", "Ranger", "Rogue", "Sorcerer","Warlock", "Wizard"
     ];
-  
+    bardSpells: String[]=["Vicious Mokery"
+    ];
 }
