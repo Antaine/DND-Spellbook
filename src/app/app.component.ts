@@ -11,8 +11,7 @@ export class AppComponent {
   selectedValue: string;
   selectedFruit: string;
   
-    colors: String[] = [    "AliceBlue","Aqua","Black","BlanchedAlmond","Blue","BlueViolet",   
-      "Brown","BurlyWood","DarkGreen","DarkKhaki","DarkRed","DarkSalmon","DeepSkyBlue"
+    colors: String[] = [    "Bard", "Cleric", "Druid", "Fighter", "Paladin", "Ranger", "Rogue(Arcane Tricker Archtype", "Sorcerer","Warlock", "Wizard"
     ];
   
     fruits: String[] = ["Apple", "Orange", "Plum", "Guava", "Banana", "Grapes", "Pineapple"];

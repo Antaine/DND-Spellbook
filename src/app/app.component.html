@@ -17,6 +17,7 @@
 </mat-toolbar-row>
 </mat-toolbar>
 
+
 <mat-form-field>
   <mat-select placeholder="Favorite color" [(ngModel)]="selectedValue" name="color">
       <mat-option *ngFor="let color of colors" [value]="color">
@@ -26,3 +27,4 @@
 </mat-form-field>
 <p> Selected color: {{selectedValue}} </p>
 <router-outlet></router-outlet>
+

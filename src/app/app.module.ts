@@ -6,13 +6,26 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from'@angular/common/http';
 import { MatInputModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpansionModule, MatFormFieldModule, MatSelectModule} from'@angular/material';
+import { CreateCharacterComponent } from './create-character/create-character.component';
+import { RouterModule, Routes} from '@angular/router';
 
+
+const appRoutes: Routes = [
+
+  {
+    path: 'create',
+    component: CreateCharacterComponent
+  }
+
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateCharacterComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
