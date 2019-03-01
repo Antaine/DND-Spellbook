@@ -9,10 +9,8 @@ export class AppComponent {
   title = 'DND-Spellbook';
   
   selectedValue: string;
-  selectedFruit: string;
   
-    colors: String[] = [    "Bard", "Cleric", "Druid", "Fighter", "Paladin", "Ranger", "Rogue(Arcane Tricker Archtype", "Sorcerer","Warlock", "Wizard"
+    classes: String[] = ["Barbarian","Bard", "Cleric", "Druid", "Fighter","Monk", "Paladin", "Ranger", "Rogue", "Sorcerer","Warlock", "Wizard"
     ];
   
-    fruits: String[] = ["Apple", "Orange", "Plum", "Guava", "Banana", "Grapes", "Pineapple"];
 }
