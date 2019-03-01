@@ -1,1 +1,2 @@
-Fixed Button error and added Taskbar.
+Fixed Button error and added Taskbar. - A
+Fixed Select Class error on create Class Page - A.(html was fine but the array was not in the export class in the typescript)
