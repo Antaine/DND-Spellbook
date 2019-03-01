@@ -13,11 +13,13 @@
 24/02/2019
           - Fixed Issue with Mat Select Button causing App not to load.(Add More Detail Later)
           - Added Simple mat button that allows multiple options.
-          - Created to do List
+          - Created to do List.
           
 25/02/2019
-         - Created Update List
+         - Created Update List.
          
 01/03/2019
-         - Removed Unused Code
-         - Altered Select to Include all Classes for fringe Cases
+         - Removed Unused Code.
+         - Altered Select to Include all Classes for fringe Cases.
+         - Investigating Firebase as a databse to store Spell info and save space on the app.
+         - Attempting to Connect firebase to Angular.
