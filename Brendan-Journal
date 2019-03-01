@@ -8,3 +8,8 @@ Finished designing logo for app.
 Create a second logo for app, this a gif image where the logo changes the colour red to maroon. 
 Upon looking at this I could see that it was a bit flashy and distracting. 
 At the moment Antaine and I decided to use the orginal image created as the logo for the time being
+
+01/03/19
+Created a new component on the app for the create character page.
+Update String array in app.module.ts to include all the classes in dnd that can cast spells
+At the moment, cannot get that array to show up the second page.
