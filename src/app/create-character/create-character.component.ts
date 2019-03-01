@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class CreateCharacterComponent implements OnInit {
 
   constructor() { }
-
+  selectedValue: string;
+  
+    classes: String[] = ["Barbarian","Bard", "Cleric", "Druid", "Fighter","Monk", "Paladin", "Ranger", "Rogue", "Sorcerer","Warlock", "Wizard"
+    ];
   ngOnInit() {
   }
 

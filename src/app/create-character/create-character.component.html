@@ -3,14 +3,14 @@
 <mat-card>
 
   
-<mat-form-field>
-  <mat-select placeholder="Favorite color" [(ngModel)]="selectedValue" name="color">
-      <mat-option *ngFor="let color of colors" [value]="color">
-        {{color}}
-      </mat-option>
-  </mat-select>
-</mat-form-field>
-<p> Selected color: {{selectedValue}} </p>-->
+    <mat-form-field>
+        <mat-select placeholder="Select Class" [(ngModel)]="selectedValue" name="class">
+            <mat-option *ngFor="let class of classes" [value]="class">
+              {{class}}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p> Selected class: {{selectedValue}} </p>
 
 </mat-card>
 
