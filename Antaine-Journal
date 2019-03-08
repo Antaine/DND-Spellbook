@@ -24,3 +24,6 @@
          - Investigating Firebase as a databse to store Spell info and save space on the app.
          - Attempting to Connect firebase to Angular.
          - Fixed Select Class on Create Class Page.
+         
+09/03/2019
+        - Working on connecting the app and the database created on firebase.
