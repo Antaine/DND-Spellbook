@@ -3,29 +3,22 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  firebase: {
-<<<<<<< HEAD
-    apiKey: "AIzaSyCh56EmQ92XacaREQ53eMHcJWXkOLe52NY",
-    authDomain: "dnd-spellbook-1.firebaseapp.com",
-    storageBucket: "dnd-spellbook-1.firebaseapp.com",
-    projectId: "dnd-spellbook-1"
-=======
-    apiKey:"AIzaSyCh56EmQ92XacaREQ53eMHcJWXkOLe52NY",
-    authDomain:"dnd-spellbook-1.firebaseapp.com",
-    databaseURL: "https://dnd-spellbook-1.firebaseio.com/",
-    projectId: "dnd-spellbook-1",
-    storageBucket:"dnd-spellbook-1.firebaseapp.com",
-    messagingSenderId: "119770126334"
->>>>>>> 362694336f8d1d5d9a9a16502335e8a0533cf22e
-  }
-};
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+    production: false,
+    firebase: {
+      apiKey:"AIzaSyCh56EmQ92XacaREQ53eMHcJWXkOLe52NY",
+      authDomain:"dnd-spellbook-1.firebaseapp.com",
+      databaseURL: "https://dnd-spellbook-1.firebaseio.com/",
+      projectId: "dnd-spellbook-1",
+      storageBucket:"dnd-spellbook-1.firebaseapp.com",
+      messagingSenderId: "119770126334"
+    }
+  };
+  
+  /*
+   * For easier debugging in development mode, you can import the following file
+   * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
+   *
+   * This import should be commented out in production mode because it will have a negative impact
+   * on performance if an error is thrown.
+   */
+  // import 'zone.js/dist/zone-error';  // Included with Angular CLI.

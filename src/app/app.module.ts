@@ -11,13 +11,10 @@ import { RouterModule, Routes} from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/database/database.module';
-<<<<<<< HEAD
+//mport { AngularFireStoreModule} from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 import { app } from 'firebase';
 
-=======
-import { environment } from '../environments/environment';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
->>>>>>> 362694336f8d1d5d9a9a16502335e8a0533cf22e
 
 const appRoutes: Routes = [
 
