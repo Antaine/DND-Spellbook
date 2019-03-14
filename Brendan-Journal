@@ -13,3 +13,9 @@ At the moment Antaine and I decided to use the orginal image created as the logo
 Created a new component on the app for the create character page.
 Update String array in app.module.ts to include all the classes in dnd that can cast spells
 At the moment, cannot get that array to show up the second page.
+
+13/03/19
+Updated the Create Character Page. Added the option for the useer to enter name, level, class and background of there character.
+Create two more arrays. This time one an number array for the levels, and one for the backgrounds.
+Added in code that is firebase related. Cant connect app to firebase database yet.
+Coded in the logo png image onto the app
