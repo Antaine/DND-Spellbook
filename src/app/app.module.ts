@@ -11,9 +11,15 @@ import { RouterModule, Routes} from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/database/database.module';
+import { app } from 'firebase';
 
 
 const appRoutes: Routes = [
+
+  {
+    path: 'home',
+    component: AppComponent
+  },
 
   {
     path: 'create',

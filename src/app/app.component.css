@@ -1,2 +1,8 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-mat-option {   background-color: #a1d1f5;  color: blueviolet;}
+mat-option {   background-color: black;  color: black;}
+:host {
+    display: block;
+    border: 1px solid black;
+    background-color: black;
+    color: black;
+  }

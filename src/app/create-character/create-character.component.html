@@ -1,17 +1,49 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
 <mat-card>
-
-  
+  <form>
     <mat-form-field>
+        <p>Select Class</p>
         <mat-select placeholder="Select Class" [(ngModel)]="selectedValue" name="class">
             <mat-option *ngFor="let class of classes" [value]="class">
               {{class}}
             </mat-option>
         </mat-select>
       </mat-form-field>
-      <p> Selected class: {{selectedValue}} </p>
-
+     <br>
+      <mat-form-field>
+        <p>Enter Character Name</p>
+        <input
+            matInput
+            type="text"
+            name="name"
+            ngModel
+           
+            minlength="3">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+          <p>Pick Level</p>
+            <mat-select placeholder="Pick Level" [(ngModel)]="selectedLevel" name="level">
+                <mat-option *ngFor="let level of levels" [value]="level">
+                  {{level}}
+                </mat-option>
+            </mat-select>
+     </mat-form-field>
+      <br>
+     <mat-form-field>
+            <p>Choose Background</p>
+              <mat-select placeholder="Choose Background" [(ngModel)]="selectedBackground" name="background">
+                  <mat-option *ngFor="let background of backgrounds" [value]="background">
+                    {{background}}
+                  </mat-option>
+              </mat-select>
+       </mat-form-field>
+       <br>
+       <button
+         mat-raised-button
+         color="accent"
+        type="submit">Save Post</button>
+    </form>
 </mat-card>
 
 
