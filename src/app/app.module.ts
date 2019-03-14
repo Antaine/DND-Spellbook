@@ -11,8 +11,13 @@ import { RouterModule, Routes} from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/database/database.module';
+<<<<<<< HEAD
 import { app } from 'firebase';
 
+=======
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+>>>>>>> 362694336f8d1d5d9a9a16502335e8a0533cf22e
 
 const appRoutes: Routes = [
 
@@ -47,12 +52,7 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     FormsModule,
     MatSelectModule,
-    AngularFireModule.initializeApp({
-      apiKey: "AIzaSyCh56EmQ92XacaREQ53eMHcJWXkOLe52NY",
-      authDomain: "dnd-spellbook-1.firebaseapp.com",
-      storageBucket: "dnd-spellbook-1.firebaseapp.com",
-      projectId: "dnd-spellbook-1",
-    }),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     AngularFireDatabaseModule
   ],

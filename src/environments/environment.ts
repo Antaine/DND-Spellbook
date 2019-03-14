@@ -5,10 +5,19 @@
 export const environment = {
   production: false,
   firebase: {
+<<<<<<< HEAD
     apiKey: "AIzaSyCh56EmQ92XacaREQ53eMHcJWXkOLe52NY",
     authDomain: "dnd-spellbook-1.firebaseapp.com",
     storageBucket: "dnd-spellbook-1.firebaseapp.com",
     projectId: "dnd-spellbook-1"
+=======
+    apiKey:"AIzaSyCh56EmQ92XacaREQ53eMHcJWXkOLe52NY",
+    authDomain:"dnd-spellbook-1.firebaseapp.com",
+    databaseURL: "https://dnd-spellbook-1.firebaseio.com/",
+    projectId: "dnd-spellbook-1",
+    storageBucket:"dnd-spellbook-1.firebaseapp.com",
+    messagingSenderId: "119770126334"
+>>>>>>> 362694336f8d1d5d9a9a16502335e8a0533cf22e
   }
 };
 
