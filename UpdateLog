@@ -1,2 +1,4 @@
 Fixed Button error and added Taskbar. - A
 Fixed Select Class error on create Class Page - A.(html was fine but the array was not in the export class in the typescript)
+Added in logo on app
+Made Logo into a link to go back to homepage. Problem occured here.
