@@ -1,6 +1,7 @@
 (Update Button for class Selection.)
+(Add Logo to header).
+(Add link to Logo to navigate back to the homepage).
+Connect to Firebase.
 Display Sample Spells Cantrip and Level 1.
-Add Logo to header.
-Connect AWS Server
-Add link to Logo to navigate back to the homepage.
-Move Class select from App.component to a seperate Page
+Move Class select from App.component to a seperate Page.
+Fix Home page error.
