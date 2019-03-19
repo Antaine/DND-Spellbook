@@ -19,3 +19,6 @@ Updated the Create Character Page. Added the option for the useer to enter name,
 Create two more arrays. This time one an number array for the levels, and one for the backgrounds.
 Added in code that is firebase related. Cant connect app to firebase database yet.
 Coded in the logo png image onto the app
+
+19/03/19 
+Tried to create a new favicon on the app, currently having difficulity doing this at the moment
