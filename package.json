@@ -16,11 +16,7 @@
     "@angular/common": "~7.2.7",
     "@angular/compiler": "~7.2.7",
     "@angular/core": "~7.2.7",
-<<<<<<< HEAD
     "@angular/fire": "^5.1.2",
-=======
-    "@angular/fire": "^5.1.1",
->>>>>>> 362694336f8d1d5d9a9a16502335e8a0533cf22e
     "@angular/forms": "~7.2.7",
     "@angular/material": "^7.3.4",
     "@angular/platform-browser": "^7.1.4",

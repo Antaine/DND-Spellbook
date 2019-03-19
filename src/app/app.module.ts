@@ -9,18 +9,18 @@ import { MatInputModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpans
 import { CreateCharacterComponent } from './create-character/create-character.component';
 import { RouterModule, Routes} from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireStorageModule } from 'angularfire2/storage';
-import { AngularFireDatabaseModule } from '@angular/fire/database/database.module';
-//mport { AngularFireStoreModule} from '@angular/fire/firestore';
+//import { AngularFireStorageModule } from 'angularfire2/storage';
+//import { AngularFireDatabaseModule } from '@angular/fire/database/database.module';
+import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { app } from 'firebase';
-
+import { HomepageComponent } from './homepage/homepage.component';
 
 const appRoutes: Routes = [
 
   {
     path: 'home',
-    component: AppComponent
+    component: HomepageComponent
   },
 
   {
@@ -33,7 +33,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    CreateCharacterComponent
+    CreateCharacterComponent,
+    HomepageComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -49,9 +50,9 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     FormsModule,
     MatSelectModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireStorageModule,
-    AngularFireDatabaseModule
+    AngularFireModule.initializeApp(environment.firebase)
+   // AngularFireStorageModule,
+    //AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
