@@ -31,3 +31,4 @@
 19/03/2019
         - Fixed Duplication Bug.
         - Watched Tutorials and created a basic App connecting to the database and will use that as a reference while connecting the App.
+        - Have a basic CRUD App connecting to the database.
