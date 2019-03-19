@@ -5,3 +5,4 @@ Connect to Firebase.
 Display Sample Spells Cantrip and Level 1.
 Move Class select from App.component to a seperate Page.
 Fix Home page error.
+Revaluate background selection to see if it affects Spells.(If not replace with race which does).
