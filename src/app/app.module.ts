@@ -5,16 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from'@angular/common/http';
-import { MatInputModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpansionModule, MatFormFieldModule, MatSelectModule} from'@angular/material';
+import { MatInputModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpansionModule, MatFormFieldModule, MatSelectModule,MatDialogModule} from'@angular/material';
 import { CreateCharacterComponent } from './create-character/create-character.component';
 import { RouterModule, Routes} from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 //import { AngularFireStorageModule } from 'angularfire2/storage';
 //import { AngularFireDatabaseModule } from '@angular/fire/database/database.module';
-import { AngularFirestoreModule} from '@angular/fire/firestore';
+import { AngularFirestoreModule, FirestoreSettingsToken} from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { app } from 'firebase';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
 
@@ -50,11 +51,15 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     FormsModule,
     MatSelectModule,
-    AngularFireModule.initializeApp(environment.firebase)
-   // AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    ReactiveFormsModule,
+    MatDialogModule,
+    AngularFirestoreModule
+
+    // AngularFireStorageModule,
     //AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [{ provide: FirestoreSettingsToken, useValue: {} }],
   bootstrap: [AppComponent]
 })
 export class AppModule {
