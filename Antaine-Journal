@@ -32,3 +32,6 @@
         - Fixed Duplication Bug.
         - Watched Tutorials and created a basic App connecting to the database and will use that as a reference while connecting the App.
         - Have a basic CRUD App connecting to the database.
+        - Connected Create Character to the database uploading data but the values are null. I believe this is because I removed formGroup from
+        The HTML Component because it was going errors but the sample I created was based off sending the data as an object collected from the form group
+        and that's why the values are empty upon reaching the database.
