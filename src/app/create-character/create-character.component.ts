@@ -48,8 +48,6 @@ export class CreateCharacterComponent implements OnInit {
   }
 
   resetFields(){
-    // this.avatarLink = "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg";
-    console.log("resetname is: "+name);
      this.CharacterCreateForm = this.fb.group({
        name: new FormControl('', Validators.required),
        chClass: new FormControl('', Validators.required),
@@ -58,7 +56,8 @@ export class CreateCharacterComponent implements OnInit {
    }
 
    onSubmit(value){
-    console.log("submit name is: "+value.name + " Class: " + value.class + " " + " Level: " + value.level);
+     value.chClass = value.classControl;
+    console.log("submit name is: "+value.name + " Class: " + value.chClass + " " + " Level: " + value.level + " Class Control: " + value.classControl);
     this.firebaseService.createUser(value)
     .then(
       res => {
@@ -68,12 +67,6 @@ export class CreateCharacterComponent implements OnInit {
     )
   }
   selectedValue: string;
-
-  /*selectedLvl: Number;
-   
-    levels: Number[] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
-    ];*/
-
   selectedBackground: string;
     backgrounds: String[] = ["Acolyte","Charlatan","Criminal","Entertainer","Folk Hero","Hermit", "Noble", "Outlander","Sage","Sailor","Soldier", "Urchin"
     ];
