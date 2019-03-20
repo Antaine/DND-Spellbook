@@ -1,29 +1,63 @@
-<mat-card>
-    <form class="createForm"novalidate (ngSubmit)="onSubmit(CharacterCreateForm.value)">
-        <mat-form-field>
-          <input matInput placeholder="Character Name" class="form-control">
-        </mat-form-field>
-        <ng-container *ngFor="let validation of validation_messages.name">
-            <mat-error *ngIf="CharacterCreateForm.get('name').hasError(validation.type) && (CharacterCreateForm.get('name').dirty || CharacterCreateForm.get('name').touched)">{{validation.message}}</mat-error>
-        </ng-container>
-  <br>
+<!-- <mat-card> -->
+<form class="create-form" [formGroup]= "CharacterCreateForm" novalidate (ngSubmit)="onSubmit(CharacterCreateForm.value)">
+      
+  <div class ="form-group">
+      <mat-form-field>
+        <input  matInput placeholder="Character Name" class="form-control" formControlName="name">
+      </mat-form-field>
+      <ng-container *ngFor="let validation of validation_messages.name">
+        <mat-error *ngIf="CharacterCreateForm.get('name').hasError(validation.type) && (CharacterCreateForm.get('name').dirty || CharacterCreateForm.get('name').touched)">{{validation.message}}</mat-error>
+      </ng-container>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="input-style">
+        <input matInput type="number" min="1" max="20" placeholder="Level" class="form-control" formControlName="level">
+      </mat-form-field>
+      <ng-container *ngFor="let validation of validation_messages.level">
+        <mat-error *ngIf="CharacterCreateForm.get('level').hasError(validation.type) && (CharacterCreateForm.get('level').dirty || CharacterCreateForm.get('level').touched)">{{validation.message}}</mat-error>
+      </ng-container>
+    </div>
+
+    <div class ="form-group">
+       
+        <select formControlName="classControl">
+          <option [value]="class" *ngFor="let class of classes">
+                  {{class}}</option>
+        </select>
+        </div>
+       
+
+        <!-- <mat-select placeholder="Select Class" [(ngModel)]="selectedValue" name="class">
+          <mat-option formControlName="chClass" *ngFor="let class of classes" [value]="class">
+            {{class}}
+          </mat-option>
+        </mat-select> -->
+      
+      
+  
+<!--      
+    <br>
+    <div class="form-group">
     <mat-form-field class="input-style">
       <mat-select placeholder="Select Class" [(ngModel)]="selectedValue" name="class">
-        <mat-option *ngFor="let class of classes" [value]="class">
+        <mat-option formControlName="class" *ngFor="let class of classes" [value]="class">
           {{class}}
         </mat-option>
       </mat-select>
     </mat-form-field>
+    </div>
   <br>
-
+  <div class="form-group">
   <mat-form-field class="input-style">
     <mat-select placeholder="Select Level" [(ngModel)]="level" name="level">
-        <mat-option *ngFor="let level of levels" [value]="level">
+        <mat-option formControlName="level" *ngFor="let level of levels" [value]="level">
           {{level}}
         </mat-option>
       </mat-select>
     </mat-form-field>
-  <br>
+    </div>
+  <br> -->
 
     <!-- <mat-form-field>
       <p>Choose Background</p>
@@ -34,9 +68,13 @@
       </mat-select>
     </mat-form-field>
     <br> -->
+    <div class="row submit-button-container">
+       
     <button mat-raised-button color="accent" type="submit">Save Post</button>
+  
+  </div>
   </form>
-</mat-card>
+<!-- </mat-card> -->
 
 
 

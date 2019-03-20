@@ -42,7 +42,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
       return this.db.collection('characters').add({
         name: value.name,
        // nameToSearch: value.name.toLowerCase(),
-        class: value.class,
+        class: value.chClass,
         level:value.level,
       });
     }

@@ -63,11 +63,5 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule {
-     // constructor(private afStorage: AngularFireStorage) { }
 
-  /*  Spells:AngularFireList<any>;
-    constructor(db2: AngularFireDatabase) {
-    this.Spells = db2.list('Spells');
-          }
-  ngOnInit() {}*/
  }

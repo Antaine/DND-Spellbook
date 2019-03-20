@@ -12,6 +12,8 @@ import { FirebaseService } from '../services/firebase.service';
 export class CreateCharacterComponent implements OnInit {
 
   CharacterCreateForm: FormGroup;
+  classes: String[] = ["Barbarian","Bard", "Cleric", "Druid", "Fighter","Monk", "Paladin", "Ranger", "Rogue", "Sorcerer","Warlock", "Wizard"
+    ];
   validation_messages = {
     'name': [
       { type: 'required', message: 'Name is required.' }
@@ -20,7 +22,7 @@ export class CreateCharacterComponent implements OnInit {
       { type: 'required', message: 'Class is required.' }
     ],
     'level': [
-      { type: 'required', message: 'Level is required.' },
+      { type: 'required', message: 'Enter a Level between 1-20' },
     ]
   };
 
@@ -38,8 +40,9 @@ export class CreateCharacterComponent implements OnInit {
 
   createForm() {
     this.CharacterCreateForm = this.fb.group({
+      classControl: ['Bard'],
       name: ['', Validators.required ],
-      class: ['', Validators.required ],
+      chClass: ['', Validators.required ],
       level: ['', Validators.required ]
     });
   }
@@ -49,13 +52,13 @@ export class CreateCharacterComponent implements OnInit {
     console.log("resetname is: "+name);
      this.CharacterCreateForm = this.fb.group({
        name: new FormControl('', Validators.required),
-       class: new FormControl('', Validators.required),
+       chClass: new FormControl('', Validators.required),
        level: new FormControl('', Validators.required),
      });
    }
 
    onSubmit(value){
-    console.log("submit name is: "+name);
+    console.log("submit name is: "+value.name + " Class: " + value.class + " " + " Level: " + value.level);
     this.firebaseService.createUser(value)
     .then(
       res => {
@@ -65,14 +68,11 @@ export class CreateCharacterComponent implements OnInit {
     )
   }
   selectedValue: string;
-  
-    classes: String[] = ["Barbarian","Bard", "Cleric", "Druid", "Fighter","Monk", "Paladin", "Ranger", "Rogue", "Sorcerer","Warlock", "Wizard"
-    ];
 
-  selectedLvl: Number;
+  /*selectedLvl: Number;
    
     levels: Number[] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
-    ];
+    ];*/
 
   selectedBackground: string;
     backgrounds: String[] = ["Acolyte","Charlatan","Criminal","Entertainer","Folk Hero","Hermit", "Noble", "Outlander","Sage","Sailor","Soldier", "Urchin"
