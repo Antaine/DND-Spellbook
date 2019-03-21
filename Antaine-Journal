@@ -35,3 +35,6 @@
         - Connected Create Character to the database uploading data but the values are null. I believe this is because I removed formGroup from
         The HTML Component because it was going errors but the sample I created was based off sending the data as an object collected from the form group
         and that's why the values are empty upon reaching the database.
+       
+20/03/2019
+        - Got class to upload by setting the object value.class = to the selected form control which was why it was sending null.
