@@ -1,8 +1,16 @@
-(Update Button for class Selection.)
-(Add Logo to header).
-(Add link to Logo to navigate back to the homepage).
-Connect to Firebase.
+                                                                                      (Update Button for class Selection.)
+                                                                                      (Add Logo to header).
+                                                                                      (Add link to Logo to navigate back to the homepage).
+                                                                                      (Connect to Firebase).
 Display Sample Spells Cantrip and Level 1.
-Move Class select from App.component to a seperate Page.
-Fix Home page error.
-Revaluate background selection to see if it affects Spells.(If not replace with race which does).
+                                                                                      (Move Class select from App.component to a seperate Page).
+                                                                                      (Fix Home page error).
+                                                                                      (Character Details Upload to the Server)
+Revaluate background selection to see if it affects Spells.
+(If not replace with race which does).
+Display Characters.
+Add search Bar & filters.
+Create LogIn and Sign Up.
+Add more options to the Character Create.
+Add more features to the Spellls Table on Firebase.
+Css & Design.
