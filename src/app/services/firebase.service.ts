@@ -10,7 +10,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
     constructor(public db: AngularFirestore) {}
   
     getUser(userKey){
-      return this.db.collection('users').doc(userKey).snapshotChanges();
+      return this.db.collection('characters').doc(userKey).snapshotChanges();
     }
   
     updateUser(userKey, value){
@@ -23,7 +23,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
     }
   
     getUsers(){
-      return this.db.collection('users').snapshotChanges();
+      return this.db.collection('characters').snapshotChanges();
     }
   
     searchUsers(searchValue){

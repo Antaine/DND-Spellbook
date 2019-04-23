@@ -1,0 +1,17 @@
+<div class="list-group users-list">
+  <div *ngFor="let character of characters" class="list-group-character list-group-character-action flex-column align-characters-start">
+    <div class="row">
+      <div class="col col-md-2 image-col">
+        <img class="image" [src]="character.payload.doc.data().avatar">
+      </div>
+      <div class="col col-md-8 text-col">
+        <h5 class="mb-1">{{character.payload.doc.data().name}}, The {{character.payload.doc.data().class}}</h5>
+        <small>Level: {{character.payload.doc.data().level}}</small>
+      </div>
+      <div class="col col-md-2 actions-col">
+        <button class="btn btn-outline-primary action" (click)="viewDetails(character)" type="button">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

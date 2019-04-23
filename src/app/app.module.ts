@@ -9,14 +9,19 @@ import { MatInputModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpans
 import { CreateCharacterComponent } from './create-character/create-character.component';
 import { RouterModule, Routes} from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
-//import { AngularFireStorageModule } from 'angularfire2/storage';
-//import { AngularFireDatabaseModule } from '@angular/fire/database/database.module';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/database/database.module';
 import { AngularFirestoreModule, FirestoreSettingsToken} from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { app } from 'firebase';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReactiveFormsModule } from '@angular/forms';
+
 import { RollStatsComponent } from './roll-stats/roll-stats.component';
+
+import { DisplayCharactersComponent } from './display-characters/display-characters.component';
+import { DisplaySpellsComponent } from './display-spells/display-spells.component';
+
 
 const appRoutes: Routes = [
 
@@ -33,6 +38,11 @@ const appRoutes: Routes = [
   {
     path: 'roll',
     component: RollStatsComponent
+  },
+
+  {
+    path: 'displayC',
+    component: DisplayCharactersComponent
   }
 
 ];
@@ -42,7 +52,8 @@ const appRoutes: Routes = [
     AppComponent,
     CreateCharacterComponent,
     HomepageComponent,
-    RollStatsComponent
+    RollStatsComponent,
+    DisplayCharactersComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -61,7 +72,8 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     ReactiveFormsModule,
     MatDialogModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
 
     // AngularFireStorageModule,
     //AngularFireDatabaseModule
