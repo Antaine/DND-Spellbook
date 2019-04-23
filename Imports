@@ -1,0 +1,4 @@
+npm install --save-dev @angular-devkit/build-angular
+npm audit fix
+npm install firebase angularfire2 in angular 4
+Missing imports -A
