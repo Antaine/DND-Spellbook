@@ -38,3 +38,7 @@
        
 20/03/2019
         - Got class to upload by setting the object value.class = to the selected form control which was why it was sending null.
+        
+23/04/2019
+        - Was busy with other projects and exams so not much work was done.
+        - Found missing imports to allow the app to work on other pc's for development which really slowed us down.
