@@ -17,6 +17,7 @@ import { app } from 'firebase';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DisplayCharactersComponent } from './display-characters/display-characters.component';
+import { DisplaySpellsComponent } from './display-spells/display-spells.component';
 
 const appRoutes: Routes = [
 
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     AppComponent,
     CreateCharacterComponent,
     HomepageComponent,
-    DisplayCharactersComponent
+    DisplayCharactersComponent,
+    DisplaySpellsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
