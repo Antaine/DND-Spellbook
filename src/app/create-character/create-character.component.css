@@ -1,0 +1,11 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+mat-option {   background-color: black;  color: black;}
+:host Input {
+    display: block;
+    border: 0.5px solid red;
+    background-color: rgb(114, 109, 109);
+    color: red;
+    font: 'Alegrian';
+    font-size-adjust: inherit;
+    font-size: 15px;
+  }
