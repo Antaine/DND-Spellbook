@@ -9,13 +9,14 @@ import { MatInputModule,MatCardModule,MatButtonModule,MatToolbarModule,MatExpans
 import { CreateCharacterComponent } from './create-character/create-character.component';
 import { RouterModule, Routes} from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
-//import { AngularFireStorageModule } from 'angularfire2/storage';
-//import { AngularFireDatabaseModule } from '@angular/fire/database/database.module';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/database/database.module';
 import { AngularFirestoreModule, FirestoreSettingsToken} from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { app } from 'firebase';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DisplayCharactersComponent } from './display-characters/display-characters.component';
 
 const appRoutes: Routes = [
 
@@ -27,6 +28,11 @@ const appRoutes: Routes = [
   {
     path: 'create',
     component: CreateCharacterComponent
+  },
+
+  {
+    path: 'displayC',
+    component: DisplayCharactersComponent
   }
 
 ];
@@ -35,7 +41,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     CreateCharacterComponent,
-    HomepageComponent
+    HomepageComponent,
+    DisplayCharactersComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -54,7 +61,8 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     ReactiveFormsModule,
     MatDialogModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
 
     // AngularFireStorageModule,
     //AngularFireDatabaseModule
