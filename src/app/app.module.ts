@@ -34,6 +34,11 @@ const appRoutes: Routes = [
   {
     path: 'displayC',
     component: DisplayCharactersComponent
+  },
+
+  {
+    path: 'spells',
+    component: DisplaySpellsComponent
   }
 
 ];

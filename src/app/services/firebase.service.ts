@@ -25,6 +25,10 @@ import { AngularFirestore } from '@angular/fire/firestore';
     getUsers(){
       return this.db.collection('characters').snapshotChanges();
     }
+
+    getSpells(){
+      return this.db.collection('Spells/BardSpells/Cantrips').doc('CantripList').snapshotChanges();
+    }
   
     searchUsers(searchValue){
       return this.db.collection('users',ref => ref.where('nameToSearch', '>=', searchValue)
@@ -37,7 +41,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
     }
   
   
-    createUser(value){
+    createCharacter(value){
       console.log("name is: "+name);
       return this.db.collection('characters').add({
         name: value.name,

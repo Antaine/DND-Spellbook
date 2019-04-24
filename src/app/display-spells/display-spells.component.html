@@ -1,3 +1,11 @@
-<p>
-  display-spells works!
-</p>
+<div class="list-group users-list">
+  <div *ngFor="let character of characters" class="list-group-character list-group-character-action flex-column align-characters-start">
+    <div class="row">
+        <h5 class="mb-1">{{spells.payload.doc.data().spellName}}</h5>
+      </div>
+      <!-- <div class="col col-md-2 actions-col">
+        <button class="btn btn-outline-primary action" (click)="viewDetails(character)" type="button">
+        </button> -->
+      <!-- </div> -->
+    </div>
+  </div>

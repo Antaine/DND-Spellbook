@@ -58,7 +58,7 @@ export class CreateCharacterComponent implements OnInit {
    onSubmit(value){
      value.chClass = value.classControl;
     console.log("submit name is: "+value.name + " Class: " + value.chClass + " " + " Level: " + value.level + " Class Control: " + value.classControl);
-    this.firebaseService.createUser(value)
+    this.firebaseService.createCharacter(value)
     .then(
       res => {
         this.resetFields();
