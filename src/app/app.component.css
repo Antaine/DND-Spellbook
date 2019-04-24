@@ -2,7 +2,20 @@
 mat-option {   background-color: black;  color: black;}
 :host {
     display: block;
-    border: 2px solid red;
-    background-color: white;
+    border: 10px solid red;
+    background-color: black;
     color: black;
+    font-family: 'Algerian';
+    font-size-adjust: inherit;
+  }
+
+:host mat-toolbar {
+  background-color: black;
+}
+
+:host button {
+    font-family: 'Algerian';
+    font-size: 150%;
+    font-size-adjust: inherit;
+    color: red;
   }

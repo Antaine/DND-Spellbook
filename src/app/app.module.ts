@@ -16,8 +16,12 @@ import { environment } from '../environments/environment';
 import { app } from 'firebase';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { RollStatsComponent } from './roll-stats/roll-stats.component';
+
 import { DisplayCharactersComponent } from './display-characters/display-characters.component';
 import { DisplaySpellsComponent } from './display-spells/display-spells.component';
+
 
 const appRoutes: Routes = [
 
@@ -29,6 +33,11 @@ const appRoutes: Routes = [
   {
     path: 'create',
     component: CreateCharacterComponent
+  },
+
+  {
+    path: 'roll',
+    component: RollStatsComponent
   },
 
   {
@@ -48,8 +57,8 @@ const appRoutes: Routes = [
     AppComponent,
     CreateCharacterComponent,
     HomepageComponent,
-    DisplayCharactersComponent,
-    DisplaySpellsComponent
+    RollStatsComponent,
+    DisplayCharactersComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

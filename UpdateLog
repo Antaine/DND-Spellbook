@@ -6,4 +6,8 @@ Fixed Duplication bug of the header duplicating when navigating back to the home
 Got the character details uploading to the database with validation. -A
 Bug where the inputs are getting a css value ssetting the background colour to black. -A
 Found the missing Imports needed to run the app on other pcs. -A
-Fixed Background color bug
+Fixed background color bug for now - B
+Added css styles onto the app - B
+Fixed/Updated logo, -B
+Finally added in custom made favicon -  B
+Generated new component page for roll stats - B
