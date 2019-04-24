@@ -9,3 +9,9 @@ mat-option {   background-color: black;  color: black;}
     font-size-adjust: inherit;
     font-size: 15px;
   }
+
+  :host button {
+    color: black;
+    background-color: red;
+    font: 'Alegrian';
+  }
