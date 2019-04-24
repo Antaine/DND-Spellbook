@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { stringify } from '@angular/core/src/render3/util';
 
 @Injectable({
     providedIn: 'root'
@@ -27,8 +28,14 @@ import { AngularFirestore } from '@angular/fire/firestore';
     }
 
     getSpells(){
-      return this.db.collection('Spells/BardSpells/Cantrips').doc('CantripList').snapshotChanges();
+      spells: String;
+      return this.db.collection('Spells/BardSpells/Cantrips').snapshotChanges();
     }
+    getSpells1(){
+      spells: String;
+    return this.db.collection('bardCantrips').snapshotChanges();
+    }
+
   
     searchUsers(searchValue){
       return this.db.collection('users',ref => ref.where('nameToSearch', '>=', searchValue)

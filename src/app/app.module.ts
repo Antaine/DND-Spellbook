@@ -58,7 +58,8 @@ const appRoutes: Routes = [
     CreateCharacterComponent,
     HomepageComponent,
     RollStatsComponent,
-    DisplayCharactersComponent
+    DisplayCharactersComponent,
+    DisplaySpellsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

@@ -8,7 +8,7 @@ import { FirebaseService } from '../services/firebase.service';
   styleUrls: ['./display-spells.component.css']
 })
 export class DisplaySpellsComponent implements OnInit {
-spellName: string = "";
+name: string = "";
 spells: Array<any>;
   constructor(
     public firebaseService: FirebaseService,
@@ -23,7 +23,7 @@ spells: Array<any>;
   getData(){
     this.firebaseService.getSpells()
     .subscribe(result => {
-     //  this.spells = result;
+       this.spells = result;
        console.log(this.spells);
     })
 }}
