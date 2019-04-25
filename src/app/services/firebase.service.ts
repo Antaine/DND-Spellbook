@@ -31,9 +31,19 @@ import { stringify } from '@angular/core/src/render3/util';
       spells: String;
       return this.db.collection('Spells/BardSpells/Cantrips').snapshotChanges();
     }
-    getSpells1(){
+    getbCantrips(){
       spells: String;
-    return this.db.collection('bardCantrips').snapshotChanges();
+    return this.db.collection('Spells/BardSpells/Cantrips').snapshotChanges();
+    }
+
+    getbSpells1(){
+      spells: String;
+    return this.db.collection('Spells/BardSpells/Level_1').snapshotChanges();
+    }
+
+    getbSpells2(){
+      spells: String;
+    return this.db.collection('Spells/BardSpells/Level_2').snapshotChanges();
     }
 
   

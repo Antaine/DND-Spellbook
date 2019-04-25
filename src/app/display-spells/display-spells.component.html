@@ -1,7 +1,12 @@
 <div class="list-group spells-list">
-  <div *ngFor="let spell of spells" class="list-group-spells list-group-spells-action flex-column align-spells-start">
+  <div *ngFor="let spell of spellsB0" class="list-group-spells list-group-spells-action flex-column align-spells-start">
     <div class="row">
         <h5 class="mb-1">{{spell.payload.doc.data().Name}}</h5>
+    </div>
+  </div>
+  <div *ngFor="let spell2 of spellsB2" class="list-group-spellsB1 list-group-spells-action flex-column align-spells-start">
+    <div class="row">
+       <h5 class="mb-1">{{spell2.payload.doc.data().Name}}</h5>
     </div>
 <!-- 
       <h5 class="mb-1">{{spell.payload.doc.data().c2}}</h5>

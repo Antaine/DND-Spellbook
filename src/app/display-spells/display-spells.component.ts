@@ -9,7 +9,9 @@ import { FirebaseService } from '../services/firebase.service';
 })
 export class DisplaySpellsComponent implements OnInit {
 name: string = "";
-spells: Array<any>;
+spellsB0: Array<any>;
+spellsB1: Array<any>;
+spellsB2: Array<any>;
   constructor(
     public firebaseService: FirebaseService,
     private router: Router
@@ -23,7 +25,18 @@ spells: Array<any>;
   getData(){
     this.firebaseService.getSpells()
     .subscribe(result => {
-       this.spells = result;
-       console.log(this.spells);
+       this.spellsB0 = result;
+     //  console.log(this.spellsB0);
+      })
+      this.firebaseService.getbSpells1()
+      .subscribe(result => {
+        this.spellsB1 = result;
+    //    console.log(this.spellsB1);
     })
-}}
+    this.firebaseService.getbSpells2()
+    .subscribe(result => {
+      this.spellsB2 = result;
+     // console.log(this.spellsB1);
+  })
+
+  }}
