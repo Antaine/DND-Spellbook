@@ -7,7 +7,7 @@ import { stringify } from '@angular/core/src/render3/util';
   })
 
   export class FirebaseService {
-
+    spells: Array<any>;
     constructor(public db: AngularFirestore) {}
   
     getUser(userKey){
@@ -76,6 +76,39 @@ import { stringify } from '@angular/core/src/render3/util';
     return this.db.collection('Spells/DruidSpells/Level_2').snapshotChanges();
     }
 
+    getFilteredSpells(fClass,lvl){
+      spells: String;
+    return this.db.collection('Spells/'+'fClass'+'/'+'lvl').snapshotChanges();
+    }
+
+    getClassSpells(fClass){
+      
+    // this.spells.push(this.db.collection('Spells/'+'fClass'+'/Cantrip').snapshotChanges());
+    // this.spells.push(this.db.collection('Spells/'+'fClass'+'/Level_1').snapshotChanges());
+    // this.spells.push(this.db.collection('Spells/'+'fClass'+'/Level_2').snapshotChanges());
+    // this.spells.push(this.db.collection('Spells/'+'fClass'+'/Level_3').snapshotChanges());
+    // this.spells.push(this.db.collection('Spells/'+'fClass'+'/Level_4').snapshotChanges());
+    // this.spells.push(this.db.collection('Spells/'+'fClass'+'/Level_5').snapshotChanges());
+    // this.spells.push(this.db.collection('Spells/'+'fClass'+'/Level_6').snapshotChanges());
+    // this.spells.push(this.db.collection('Spells/'+'fClass'+'/Level_7').snapshotChanges());
+    // this.spells.push(this.db.collection('Spells/'+'fClass'+'/Level_8').snapshotChanges());
+    // this.spells.push(this.db.collection('Spells/'+'fClass'+'/Level_9').snapshotChanges());
+    return this.db.collection;
+    }
+
+    getLevelSpells(lvl){
+      
+      this.spells.push(this.db.collection('Spells/'+'Bard'+'/lvl').snapshotChanges());
+      this.spells.push(this.db.collection('Spells/'+'Cleric'+'/lvl').snapshotChanges());
+      this.spells.push(this.db.collection('Spells/'+'Druid'+'/lvl').snapshotChanges());
+      this.spells.push(this.db.collection('Spells/'+'Paladin'+'lvl').snapshotChanges());
+      this.spells.push(this.db.collection('Spells/'+'Ranger'+'lvl').snapshotChanges());
+      this.spells.push(this.db.collection('Spells/'+'Sorcerer'+'lvl').snapshotChanges());
+      this.spells.push(this.db.collection('Spells/'+'Warlock'+'lvl').snapshotChanges());
+      this.spells.push(this.db.collection('Spells/'+'Wizard'+'lvl').snapshotChanges());
+      return this.spells;
+      }
+  
   
     searchSpells(searchValue){
 
@@ -87,9 +120,9 @@ import { stringify } from '@angular/core/src/render3/util';
     //     .snapshotChanges()
     }
   
-    searchUsersByAge(value){
-      return this.db.collection('users',ref => ref.orderBy('age').startAt(value)).snapshotChanges();
-    }
+    // searchByLevel(lvl){
+    //   return this.db.collection('users',ref => ref.orderBy('age').startAt(value)).snapshotChanges();
+    // }
   
   
     createCharacter(value){

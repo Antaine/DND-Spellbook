@@ -10,6 +10,7 @@ import { FirebaseService } from '../services/firebase.service';
 export class DisplaySpellsComponent implements OnInit {
 name: string = "";
 searchValue: string = "";
+filterClass: string = "";
 filteredByName: Array<any>;
 filteredSpells: Array<any>;
 spellsB0: Array<any>;
@@ -23,6 +24,8 @@ spellsC2: Array<any>;
 spellsD0: Array<any>;
 spellsD1: Array<any>;
 spellsD2: Array<any>;
+classes: String[] = ["Barbarian","Bard", "Cleric", "Druid", "Fighter","Monk", "Paladin", "Ranger", "Rogue", "Sorcerer","Warlock", "Wizard"
+];
 
   constructor(
     public firebaseService: FirebaseService,
@@ -37,10 +40,29 @@ spellsD2: Array<any>;
   searchByName(){
   //  let value = this.searchValue.toLowerCase();
   let value = this.searchValue;
+  if(this.filterClass == '')
+  {
     this.firebaseService.searchSpells(value)
+  
     .subscribe(result => {
       this.filteredSpells = result;
     })
+
+
+  }
+  // else if (this.filterClass != null) {
+  //   this.firebaseService.getClassSpells(this.filterClass)
+
+  //   .subscribe(result => {
+  //     this.filteredSpells = result;
+  //   })
+  // }
+}
+
+selectFilter(selectedClass)
+{
+  this.filterClass = selectedClass;
+  
 }
 
   getAll(){
