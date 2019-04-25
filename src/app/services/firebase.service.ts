@@ -31,19 +31,49 @@ import { stringify } from '@angular/core/src/render3/util';
       spells: String;
       return this.db.collection('Spells/BardSpells/Cantrips').snapshotChanges();
     }
-    getbCantrips(){
+    getBCantrips(){
       spells: String;
     return this.db.collection('Spells/BardSpells/Cantrips').snapshotChanges();
     }
 
-    getbSpells1(){
+    getBSpells1(){
       spells: String;
     return this.db.collection('Spells/BardSpells/Level_1').snapshotChanges();
     }
 
-    getbSpells2(){
+    getBSpells2(){
       spells: String;
     return this.db.collection('Spells/BardSpells/Level_2').snapshotChanges();
+    }
+
+    getCCantrips(){
+      spells: String;
+    return this.db.collection('Spells/ClericSpells/Cantrips').snapshotChanges();
+    }
+
+    getCSpells1(){
+      spells: String;
+    return this.db.collection('Spells/ClericSpells/Level_1').snapshotChanges();
+    }
+
+    getCSpells2(){
+      spells: String;
+    return this.db.collection('Spells/ClericSpells/Level_2').snapshotChanges();
+    }
+
+    getDCantrips(){
+      spells: String;
+    return this.db.collection('Spells/DruidSpells/Cantrips').snapshotChanges();
+    }
+
+    getDSpells1(){
+      spells: String;
+    return this.db.collection('Spells/DruidSpells/Level_1').snapshotChanges();
+    }
+
+    getDSpells2(){
+      spells: String;
+    return this.db.collection('Spells/DruidSpells/Level_2').snapshotChanges();
     }
 
   

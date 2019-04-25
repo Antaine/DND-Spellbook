@@ -12,31 +12,72 @@ name: string = "";
 spellsB0: Array<any>;
 spellsB1: Array<any>;
 spellsB2: Array<any>;
+
+spellsC0: Array<any>;
+spellsC1: Array<any>;
+spellsC2: Array<any>;
+
+spellsD0: Array<any>;
+spellsD1: Array<any>;
+spellsD2: Array<any>;
+
   constructor(
     public firebaseService: FirebaseService,
     private router: Router
   ) { }
 
   ngOnInit() {
-    this.getData();
+    this.getAll();
     
   }
 
-  getData(){
+  getAll(){
     this.firebaseService.getSpells()
     .subscribe(result => {
        this.spellsB0 = result;
      //  console.log(this.spellsB0);
       })
-      this.firebaseService.getbSpells1()
+      this.firebaseService.getBSpells1()
       .subscribe(result => {
         this.spellsB1 = result;
     //    console.log(this.spellsB1);
     })
-    this.firebaseService.getbSpells2()
+    this.firebaseService.getBSpells2()
     .subscribe(result => {
       this.spellsB2 = result;
      // console.log(this.spellsB1);
   })
+
+  this.firebaseService.getCCantrips()
+  .subscribe(result => {
+     this.spellsC0 = result;
+   //  console.log(this.spellsB0);
+    })
+    this.firebaseService.getCSpells1()
+    .subscribe(result => {
+      this.spellsC1 = result;
+  //    console.log(this.spellsB1);
+  })
+  this.firebaseService.getCSpells2()
+  .subscribe(result => {
+    this.spellsC2 = result;
+   // console.log(this.spellsB1);
+})
+
+this.firebaseService.getDCantrips()
+.subscribe(result => {
+   this.spellsD0 = result;
+ //  console.log(this.spellsB0);
+  })
+  this.firebaseService.getDSpells1()
+  .subscribe(result => {
+    this.spellsD1 = result;
+//    console.log(this.spellsB1);
+})
+this.firebaseService.getDSpells2()
+.subscribe(result => {
+  this.spellsD2 = result;
+ // console.log(this.spellsB1);
+})
 
   }}

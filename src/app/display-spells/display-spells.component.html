@@ -1,13 +1,87 @@
 <div class="list-group spells-list">
+    <h3>Bard</h3>
+    <h4>Cantrips:</h4>
   <div *ngFor="let spell of spellsB0" class="list-group-spells list-group-spells-action flex-column align-spells-start">
     <div class="row">
         <h5 class="mb-1">{{spell.payload.doc.data().Name}}</h5>
+        <h5 class="mb-1">_Level:{{spell.payload.doc.data().Level}}</h5>
     </div>
   </div>
-  <div *ngFor="let spell2 of spellsB2" class="list-group-spellsB1 list-group-spells-action flex-column align-spells-start">
+  <h4>Level: 1</h4>
+  <div *ngFor="let spell of spellsB1" class="list-group-spells list-group-spells-action flex-column align-spells-start">
     <div class="row">
-       <h5 class="mb-1">{{spell2.payload.doc.data().Name}}</h5>
+        <h5 class="mb-1">{{spell.payload.doc.data().Name}}</h5>
+        <h5 class="mb-1"> _Level:{{spell.payload.doc.data().Level}}</h5>
     </div>
+  </div>
+  <h4>Level: 2</h4>
+  <div *ngFor="let spell of spellsB2" class="list-group-spells list-group-spells-action flex-column align-spells-start">
+    <div class="row">
+        <h5 class="mb-1">{{spell.payload.doc.data().Name}}</h5>
+        <h5 class="mb-1">_Level:{{spell.payload.doc.data().Level}}</h5>
+    </div>
+  </div>
+
+  <div class="list-group spells-list">
+      <h3>Cleric</h3>
+      <h4>Cantrips</h4>
+    <div *ngFor="let spell of spellsC0" class="list-group-spells list-group-spells-action flex-column align-spells-start">
+      <div class="row">
+    
+          <h5 class="mb-1">_Level:{{spell.payload.doc.data().Name}}</h5>
+          <h5 class="mb-1">_Level:{{spell.payload.doc.data().Level}}</h5>
+      </div>
+    </div>
+    <h4>Level: 1</h4>
+    <div *ngFor="let spell of spellsC1" class="list-group-spells list-group-spells-action flex-column align-spells-start">
+      <div class="row">
+          <h5 class="mb-1">{{spell.payload.doc.data().Name}}</h5>
+          <h5 class="mb-1"> _Level:{{spell.payload.doc.data().Level}}</h5>
+      </div>
+    </div>
+    <h4>Level: 2</h4>
+    <div *ngFor="let spell of spellsC2" class="list-group-spells list-group-spells-action flex-column align-spells-start">
+      <div class="row">
+          <h5 class="mb-1">{{spell.payload.doc.data().Name}}</h5>
+          <h5 class="mb-1">_Level:{{spell.payload.doc.data().Level}}</h5>
+      </div>
+    </div>
+
+    <div class="list-group spells-list">
+        <h3>Druid</h3>
+        <h4>Cantrips</h4>
+      <div *ngFor="let spell of spellsD0" class="list-group-spells list-group-spells-action flex-column align-spells-start">
+        <div class="row">
+
+            <h5 class="mb-1">{{spell.payload.doc.data().Name}}</h5>
+            <h5 class="mb-1">_Level:{{spell.payload.doc.data().Level}}</h5>
+        </div>
+      </div>
+      <h4>Level: 1</h4>
+      <div *ngFor="let spell of spellsD1" class="list-group-spells list-group-spells-action flex-column align-spells-start">
+        <div class="row">
+            <h5 class="mb-1">{{spell.payload.doc.data().Name}}</h5>
+            <h5 class="mb-1">_Level:{{spell.payload.doc.data().Level}}</h5>
+        </div>
+      </div>
+      <h4>Level: 2</h4>
+      <div *ngFor="let spell of spellsD2" class="list-group-spells list-group-spells-action flex-column align-spells-start">
+        <div class="row">
+            <h5 class="mb-1">{{spell.payload.doc.data().Name}}</h5>
+            <h5 class="mb-1">{{spell.payload.doc.data().Level}}</h5>
+        </div>
+      </div>
+  <!-- <div *ngFor="let spell1 of spellsB1" class="list-group-spellsB1 list-group-spells-action flex-column align-spells-start">
+    <div class="row">
+       <h5 class="mb-1">{{spell1.payload.doc.data().Name}}</h5>
+       <h5 class="mb-1">{{spell1.payload.doc.data().Level}}</h5>
+    </div>
+
+    <div *ngFor="let spell2 of spellsB2" class="list-group-spellsB2 list-group-spells-action flex-column align-spells-start">
+      <div class="row">
+         <h5 class="mb-1">{{spell2.payload.doc.data().Name}}</h5>
+         <h5 class="mb-1">{{spell2.payload.doc.data().Level}}</h5>
+      </div> -->
 <!-- 
       <h5 class="mb-1">{{spell.payload.doc.data().c2}}</h5>
 
@@ -22,7 +96,7 @@
         <h5 class="mb-1">{{spell.payload.doc.data().c10}}</h5>
         <h5 class="mb-1">{{spell.payload.doc.data().c11}}</h5>
         <h5 class="mb-1">{{spell.payload.doc.data().c12}}</h5> -->
-      </div>
+
       <!-- <div class="col col-md-2 actions-col">
         <button class="btn btn-outline-primary action" (click)="viewDetails(character)" type="button">
         </button> -->

@@ -1,0 +1,9 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+mat-option {   background-color: black;  color: black;}
+
+:host{
+    color: red;
+}
+:row {
+   padding: 5%; 
+}
