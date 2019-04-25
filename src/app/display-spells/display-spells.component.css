@@ -4,6 +4,12 @@ mat-option {   background-color: black;  color: black;}
 :host{
     color: red;
 }
-:row {
-   padding: 5%; 
+
+:host h4{
+    border-bottom-style: groove;
+    border-bottom-color: darkred;
+}
+
+:host h5{
+    padding: 1%;
 }
