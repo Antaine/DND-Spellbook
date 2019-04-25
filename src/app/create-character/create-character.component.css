@@ -10,8 +10,12 @@ mat-option {   background-color: black;  color: black;}
     font-size: 15px;
   }
 
-  :host button {
+  :host button{
     color: black;
+    font: 'Alergian';
     background-color: red;
-    font: 'Alegrian';
-  }
+}
+
+:host button:hover{
+    background-color: darkred;
+}

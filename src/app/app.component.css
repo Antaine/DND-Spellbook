@@ -12,6 +12,7 @@ mat-option {   background-color: black;  color: black;}
 :host mat-toolbar {
   background-color: black;
   border: 2px solid red;
+  
 
 }
 
@@ -20,6 +21,7 @@ mat-option {   background-color: black;  color: black;}
     font-size: 150%;
     font-size-adjust: inherit;
     color: red;
+    text-align: center;
   }
 
   :host button:hover {

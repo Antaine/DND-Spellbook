@@ -27,6 +27,13 @@
         </select>
         </div>
        
+        <div class ="form-group">
+       
+          <select formControlName="raceControl">
+            <option [value]="race" *ngFor="let race of races">
+                    {{race}}</option>
+          </select>
+          </div>
 
         <!-- <mat-select placeholder="Select Class" [(ngModel)]="selectedValue" name="class">
           <mat-option formControlName="chClass" *ngFor="let class of classes" [value]="class">

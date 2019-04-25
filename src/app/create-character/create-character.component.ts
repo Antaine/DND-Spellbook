@@ -14,6 +14,9 @@ export class CreateCharacterComponent implements OnInit {
   CharacterCreateForm: FormGroup;
   classes: String[] = ["Barbarian","Bard", "Cleric", "Druid", "Fighter","Monk", "Paladin", "Ranger", "Rogue", "Sorcerer","Warlock", "Wizard"
     ];
+
+    races: String[] = ["Dragonborn", "Human", "Dwarf", "Elf", "Gnome", "Half-Elf", "Halfling", "Half-Orc", "Tiefling"
+    ];
   validation_messages = {
     'name': [
       { type: 'required', message: 'Name is required.' }
@@ -23,6 +26,9 @@ export class CreateCharacterComponent implements OnInit {
     ],
     'level': [
       { type: 'required', message: 'Enter a Level between 1-20' },
+    ],
+    'race': [
+      {type: 'required', message: 'Enter Race'}
     ]
   };
 
@@ -41,9 +47,11 @@ export class CreateCharacterComponent implements OnInit {
   createForm() {
     this.CharacterCreateForm = this.fb.group({
       classControl: ['Bard'],
+      raceControl: ['Human'],
       name: ['', Validators.required ],
       chClass: ['', Validators.required ],
-      level: ['', Validators.required ]
+      level: ['', Validators.required ],
+      race: ['',Validators.required ]
     });
   }
 
@@ -52,12 +60,13 @@ export class CreateCharacterComponent implements OnInit {
        name: new FormControl('', Validators.required),
        chClass: new FormControl('', Validators.required),
        level: new FormControl('', Validators.required),
+       race: new FormControl('', Validators.required)
      });
    }
 
    onSubmit(value){
      value.chClass = value.classControl;
-    console.log("submit name is: "+value.name + " Class: " + value.chClass + " " + " Level: " + value.level + " Class Control: " + value.classControl);
+    console.log("submit name is: "+value.name + " Class: " + value.chClass + " " + " Level: " + value.level + " Class Control: " + value.classControl+" Race "+value.race+" RaceControl "+value.raceControl);
     this.firebaseService.createCharacter(value)
     .then(
       res => {

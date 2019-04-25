@@ -6,7 +6,7 @@ mat-option {   background-color: black;  color: black;}
 }
 
 :host h4{
-    border-bottom-style: groove;
+    border-block-end-style: groove;
     border-bottom-color: darkred;
 }
 
