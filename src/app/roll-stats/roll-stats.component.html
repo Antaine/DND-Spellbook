@@ -1,3 +1,18 @@
-<p>
-  roll-stats works!
-</p>
+<h1>Lets Roll Your Stats</h1>
+
+<button mat-button (click)="RollingStats()">Roll Stats</button>
+<br>
+<ul>
+  <li><p>Str:</p></li>
+  <li><p>Dex:</p></li>
+  <li ><p>Con:</p></li>
+  <li><p>Int:</p></li>
+  <li><p>Wis:</p></li>
+  <li><p>Cha:</p></li>
+</ul>
+
+<ul>
+  <li *ngFor="let roll of d6Array">
+    {{roll}}
+  </li>
+</ul>

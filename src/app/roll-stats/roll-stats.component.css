@@ -1,0 +1,16 @@
+:host {
+    font: 'Alergian';
+    color: red;
+    text-align: center;
+    font-size: 25px;
+}
+
+:host button{
+    color: black;
+    font: 'Alergian';
+    background-color: red;
+}
+
+:host button:hover{
+    background-color: darkred;
+}
