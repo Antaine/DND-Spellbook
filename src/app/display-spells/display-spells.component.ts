@@ -9,6 +9,9 @@ import { FirebaseService } from '../services/firebase.service';
 })
 export class DisplaySpellsComponent implements OnInit {
 name: string = "";
+searchValue: string = "";
+filteredByName: Array<any>;
+filteredSpells: Array<any>;
 spellsB0: Array<any>;
 spellsB1: Array<any>;
 spellsB2: Array<any>;
@@ -31,10 +34,20 @@ spellsD2: Array<any>;
     
   }
 
+  searchByName(){
+  //  let value = this.searchValue.toLowerCase();
+  let value = this.searchValue;
+    this.firebaseService.searchSpells(value)
+    .subscribe(result => {
+      this.filteredSpells = result;
+    })
+}
+
   getAll(){
     this.firebaseService.getSpells()
     .subscribe(result => {
        this.spellsB0 = result;
+      // this.filteredSpells = result;
      //  console.log(this.spellsB0);
       })
       this.firebaseService.getBSpells1()
@@ -80,4 +93,7 @@ this.firebaseService.getDSpells2()
  // console.log(this.spellsB1);
 })
 
+
+
   }}
+  

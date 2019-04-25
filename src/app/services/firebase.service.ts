@@ -77,10 +77,15 @@ import { stringify } from '@angular/core/src/render3/util';
     }
 
   
-    searchUsers(searchValue){
-      return this.db.collection('users',ref => ref.where('nameToSearch', '>=', searchValue)
-        .where('nameToSearch', '<=', searchValue + '\uf8ff'))
-        .snapshotChanges()
+    searchSpells(searchValue){
+
+      return this.db.collection('Spells/BardSpells/Cantrips',ref => ref.where('searchName', '==', searchValue)
+)
+           .snapshotChanges()
+
+    //   return this.db.collection('Spells/BardSpells/Cantrips',ref => ref.where('searchName', '>=', searchValue)
+    // .where('searchName', '<=', searchValue + '\uf8ff')    )
+    //     .snapshotChanges()
     }
   
     searchUsersByAge(value){

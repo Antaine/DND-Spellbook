@@ -1,5 +1,24 @@
-<div class="list-group spells-list">
+<div class="row">
+    <div class="col-md-4 offset-md-1">
+      <div class="input-group">
+        <input type="text" class="form-control" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}" placeholder="Search by name..." (keyup)="searchByName()">
+ 
+      </div>
+  </div>
+  </div>
+
+  <div class="list-group spells-list">
+<div class="row"></div>
+<div *ngFor="let spellF of filteredSpells" class="list-group-spells list-group-spells-action flex-column align-spells-start">
+    <div class="row">
+        <h5 class="mb-1">{{spellF.payload.doc.data().Name}}</h5>
+        <h5 class="mb-1">_Level:{{spellF.payload.doc.data().Level}}</h5>
+    </div>
+    </div>
+  </div>
+<!-- <div class="list-group spells-list">
     <h3>Bard</h3>
+    
     <h4>Cantrips:</h4>
   <div *ngFor="let spell of spellsB0" class="list-group-spells list-group-spells-action flex-column align-spells-start">
     <div class="row">
@@ -70,7 +89,7 @@
             <h5 class="mb-1">{{spell.payload.doc.data().Name}}</h5>
             <h5 class="mb-1">{{spell.payload.doc.data().Level}}</h5>
         </div>
-      </div>
+      </div> -->
   <!-- <div *ngFor="let spell1 of spellsB1" class="list-group-spellsB1 list-group-spells-action flex-column align-spells-start">
     <div class="row">
        <h5 class="mb-1">{{spell1.payload.doc.data().Name}}</h5>
@@ -102,4 +121,4 @@
         </button> -->
       <!-- </div> -->
     <!-- </div> -->
-  </div>
+  <!-- </div> -->
