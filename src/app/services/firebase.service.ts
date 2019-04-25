@@ -79,9 +79,8 @@ import { stringify } from '@angular/core/src/render3/util';
   
     searchSpells(searchValue){
 
-      return this.db.collection('Spells/BardSpells/Cantrips',ref => ref.where('searchName', '==', searchValue)
-)
-           .snapshotChanges()
+      return this.db.collection('Spells/BardSpells/Cantrips',ref => ref.where('searchName', '>=', searchValue).where('searchName','<=', searchValue + '\uf8ff'))
+      .snapshotChanges()
 
     //   return this.db.collection('Spells/BardSpells/Cantrips',ref => ref.where('searchName', '>=', searchValue)
     // .where('searchName', '<=', searchValue + '\uf8ff')    )

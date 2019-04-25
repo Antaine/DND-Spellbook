@@ -8,8 +8,11 @@ mat-option {   background-color: black;  color: black;}
 :host h4{
     border-bottom-style: groove;
     border-bottom-color: darkred;
+
 }
 
 :host h5{
     padding: 1%;
+    background-color: rgba(70, 67, 67, 0.815);
+    width: 15%;
 }

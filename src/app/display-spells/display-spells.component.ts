@@ -47,7 +47,7 @@ spellsD2: Array<any>;
     this.firebaseService.getSpells()
     .subscribe(result => {
        this.spellsB0 = result;
-      // this.filteredSpells = result;
+       this.filteredSpells = result;
      //  console.log(this.spellsB0);
       })
       this.firebaseService.getBSpells1()
